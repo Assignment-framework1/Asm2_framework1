@@ -20,7 +20,7 @@
 	height: 100%;
 }
 label{
-	color: #573b8a;
+	color: #d6264f;
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
@@ -48,7 +48,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #573b8a;
+	background: #0f0f0f;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -59,24 +59,24 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #6d44b8;
+	background: #d6264f;
 }
-.login{
+.signin{
 	height: 460px;
 	background: #eee;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
-.login label{
-	color: #573b8a;
+.signin label{
+	color: #d6264f;
 	transform: scale(.6);
 }
 
-#chk:checked ~ .login{
+#chk:checked ~ .signin{
 	transform: translateY(-500px);
 }
-#chk:checked ~ .login label{
+#chk:checked ~ .signin label{
 	transform: scale(1);	
 }
 #chk:checked ~ .signup label{
