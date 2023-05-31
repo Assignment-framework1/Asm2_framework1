@@ -13,9 +13,11 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { SigninPageComponent } from './pages/signin-page/signin-page.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
 @NgModule({
-  declarations: [AppComponent, NotFoundPageComponent, ClientLayoutComponent, AdminLayoutComponent, CartPageComponent, CheckoutPageComponent, HomePageComponent, ProductPageComponent],
+  declarations: [AppComponent, NotFoundPageComponent, ClientLayoutComponent, SignupPageComponent, SigninPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
