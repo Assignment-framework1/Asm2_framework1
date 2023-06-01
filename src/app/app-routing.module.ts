@@ -7,6 +7,8 @@ import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { SigninPageComponent } from './pages/signin-page/signin-page.component';
+import { SingnupPageComponent } from './pages/singnup-page/singnup-page.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,8 @@ const routes: Routes = [
       { path: 'cart', component: CartPageComponent },
       { path: 'checkout', component: CheckoutPageComponent },
       { path: 'about', component: AboutPageComponent },
+      {path:'signin', component: SigninPageComponent},
+      {path:'signup',component: SingnupPageComponent},
       { path: '**', component: NotFoundPageComponent },
     ],
   },
