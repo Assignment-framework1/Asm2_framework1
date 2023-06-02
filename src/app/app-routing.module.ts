@@ -15,6 +15,13 @@ import { ListProductComponent } from './pages/admin/list-product/list-product.co
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
 import { AddProductComponent } from './pages/admin/add-product/add-product.component';
 import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
+import { ListCategoryComponent } from './pages/admin/list-category/list-category.component';
+import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+import { EditCategoryComponent } from './pages/admin/edit-category/edit-category.component';
+import { ListCheckOutComponent } from './pages/admin/list-check-out/list-check-out.component';
+import { ListSizeComponent } from './pages/admin/list-size/list-size.component';
+import { AddSizeComponent } from './pages/admin/add-size/add-size.component';
+import { EditSizeComponent } from './pages/admin/edit-size/edit-size.component';
 
 const routes: Routes = [
   {
@@ -38,7 +45,14 @@ const routes: Routes = [
       { path: 'product', component: ListProductComponent },
       { path: 'user', component: ListUserComponent },
       { path: 'addproduct', component: AddProductComponent },
-      { path: 'editproduct', component: EditProductComponent }
+      { path: 'editproduct', component: EditProductComponent },
+      { path: 'category', component: ListCategoryComponent },
+      { path: 'addcategory', component: AddCategoryComponent },
+      { path: 'editcategory', component: EditCategoryComponent },
+      { path: 'listcheckout', component: ListCheckOutComponent },
+      { path: 'size', component: ListSizeComponent },
+      { path: 'addsize', component: AddSizeComponent },
+      { path: 'editsize', component: EditSizeComponent },
     ],
   },
   { path: '**', component: NotFoundPageComponent },
