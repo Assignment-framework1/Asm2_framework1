@@ -10,6 +10,9 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { SigninPageComponent } from './pages/signin-page/signin-page.component';
 import { SingnupPageComponent } from './pages/singnup-page/singnup-page.component';
 import { DetailProductComponent } from './pages/detail-product/detail-product.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+
+
 
 const routes: Routes = [
   {
@@ -24,9 +27,15 @@ const routes: Routes = [
       { path: 'about', component: AboutPageComponent },
       { path: 'signin', component: SigninPageComponent },
       { path: 'signup', component: SingnupPageComponent },
-      { path: '**', component: NotFoundPageComponent },
+
     ],
   },
+  {
+    path: "admin", component: AdminLayoutComponent, children: [
+
+    ]
+  },
+  { path: '**', component: NotFoundPageComponent },
 ];
 
 @NgModule({
