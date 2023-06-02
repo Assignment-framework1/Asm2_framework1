@@ -13,6 +13,8 @@ import { DetailProductComponent } from './pages/detail-product/detail-product.co
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { ListProductComponent } from './pages/admin/list-product/list-product.component';
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
+import { AddProductComponent } from './pages/admin/add-product/add-product.component';
+import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,8 @@ const routes: Routes = [
     children: [
       { path: 'product', component: ListProductComponent },
       { path: 'user', component: ListUserComponent },
+      { path: 'addproduct', component: AddProductComponent },
+      { path: 'editproduct', component: EditProductComponent }
     ],
   },
   { path: '**', component: NotFoundPageComponent },
@@ -44,4 +48,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
