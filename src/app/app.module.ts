@@ -22,6 +22,13 @@ import { ListUserComponent } from './pages/admin/list-user/list-user.component';
 import { AddProductComponent } from './pages/admin/add-product/add-product.component';
 import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
 import { CheckoutComponent } from './pages/admin/checkout/checkout.component';
+import { ListSizeComponent } from './pages/admin/list-size/list-size.component';
+import { ListCategoryComponent } from './pages/admin/list-category/list-category.component';
+import { EditCategoryComponent } from './pages/admin/edit-category/edit-category.component';
+import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+import { EditSizeComponent } from './pages/admin/edit-size/edit-size.component';
+import { AddSizeComponent } from './pages/admin/add-size/add-size.component';
+import { ListCheckOutComponent } from './pages/admin/list-check-out/list-check-out.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +49,13 @@ import { CheckoutComponent } from './pages/admin/checkout/checkout.component';
     AddProductComponent,
     EditProductComponent,
     CheckoutComponent,
+    ListSizeComponent,
+    ListCategoryComponent,
+    EditCategoryComponent,
+    AddCategoryComponent,
+    EditSizeComponent,
+    AddSizeComponent,
+    ListCheckOutComponent,
   ],
   imports: [
     BrowserModule,
