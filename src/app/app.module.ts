@@ -16,9 +16,10 @@ import { ProductPageComponent } from './pages/product-page/product-page.componen
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { SigninPageComponent } from './pages/signin-page/signin-page.component';
 import { SingnupPageComponent } from './pages/singnup-page/singnup-page.component';
+import { DetailProductComponent } from './pages/detail-product/detail-product.component';
 
 @NgModule({
-  declarations: [AppComponent, NotFoundPageComponent, ClientLayoutComponent, AdminLayoutComponent, CartPageComponent, CheckoutPageComponent, HomePageComponent, ProductPageComponent, AboutPageComponent, SigninPageComponent, SingnupPageComponent],
+  declarations: [AppComponent, NotFoundPageComponent, ClientLayoutComponent, AdminLayoutComponent, CartPageComponent, CheckoutPageComponent, HomePageComponent, ProductPageComponent, AboutPageComponent, SigninPageComponent, SingnupPageComponent, DetailProductComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
