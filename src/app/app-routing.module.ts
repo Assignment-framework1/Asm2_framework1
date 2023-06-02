@@ -9,6 +9,7 @@ import { ProductPageComponent } from './pages/product-page/product-page.componen
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { SigninPageComponent } from './pages/signin-page/signin-page.component';
 import { SingnupPageComponent } from './pages/singnup-page/singnup-page.component';
+import { DetailProductComponent } from './pages/detail-product/detail-product.component';
 
 const routes: Routes = [
   {
@@ -17,11 +18,12 @@ const routes: Routes = [
     children: [
       { path: '', component: HomePageComponent },
       { path: 'product', component: ProductPageComponent },
+      { path: 'detail', component: DetailProductComponent },
       { path: 'cart', component: CartPageComponent },
       { path: 'checkout', component: CheckoutPageComponent },
       { path: 'about', component: AboutPageComponent },
-      {path:'signin', component: SigninPageComponent},
-      {path:'signup',component: SingnupPageComponent},
+      { path: 'signin', component: SigninPageComponent },
+      { path: 'signup', component: SingnupPageComponent },
       { path: '**', component: NotFoundPageComponent },
     ],
   },
