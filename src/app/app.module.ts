@@ -29,6 +29,7 @@ import { AddCategoryComponent } from './pages/admin/add-category/add-category.co
 import { EditSizeComponent } from './pages/admin/edit-size/edit-size.component';
 import { AddSizeComponent } from './pages/admin/add-size/add-size.component';
 import { ListCheckOutComponent } from './pages/admin/list-check-out/list-check-out.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ListCheckOutComponent } from './pages/admin/list-check-out/list-check-o
     EditSizeComponent,
     AddSizeComponent,
     ListCheckOutComponent,
+    ContactPageComponent,
   ],
   imports: [
     BrowserModule,
