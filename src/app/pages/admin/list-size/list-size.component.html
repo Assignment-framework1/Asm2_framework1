@@ -1,18 +1,25 @@
 <table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>STT</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let size of sizes; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ size.name }}/td></td>
+      <td>{{ size.description }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="onHandleRemoveSize(size._id)">
+          Xóa
+        </button>
+        <button class="btn btn-warning" routerLink="{{ size._id }}/edit">
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
 </table>
