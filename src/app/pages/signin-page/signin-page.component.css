@@ -1,7 +1,7 @@
 
 .main{
 	width: 350px;
-  	margin: auto;
+  	margin: 30px auto;
 	height: 500px;
 	background: red;
 	overflow: hidden;
@@ -24,7 +24,7 @@ label{
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 60px;
+	margin: 50px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
@@ -71,10 +71,11 @@ button:hover{
 .signin label{
 	color: #d6264f;
 	transform: scale(.6);
+	margin-top: 30px;
 }
 
 #chk:checked ~ .signin{
-	transform: translateY(-500px);
+	transform: translateY(-480px);
 }
 #chk:checked ~ .signin label{
 	transform: scale(1);	

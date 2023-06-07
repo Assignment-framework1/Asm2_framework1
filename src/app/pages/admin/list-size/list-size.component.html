@@ -1,3 +1,4 @@
+<a routerLink="add">Add new size</a>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -10,7 +11,7 @@
   <tbody>
     <tr *ngFor="let size of sizes; index as i">
       <td>{{ i + 1 }}</td>
-      <td>{{ size.name }}/td></td>
+      <td>{{ size.name }}</td>
       <td>{{ size.description }}</td>
       <td>
         <button class="btn btn-danger" (click)="onHandleRemoveSize(size._id)">
