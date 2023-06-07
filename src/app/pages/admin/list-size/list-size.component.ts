@@ -10,7 +10,7 @@ import { ISize } from 'src/interface/models';
 export class ListSizeComponent {
   sizes!: any[];
   constructor(private sizeService: SizeService) {
-    this.sizeService.getAll().subscribe((data) => this.sizes = data.data);
+    this.sizeService.getAll().subscribe((data) => (this.sizes = data.data));
   }
 
   onHandleRemoveSize(id: any) {

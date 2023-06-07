@@ -8,10 +8,10 @@ main h1{
     margin: 20px;
     font-size: 25px;
 }
-main .product_card {
+main .product__card {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin-bottom: 30px;
     padding: 0 5%;
     gap: 30px;
 }

@@ -1,7 +1,7 @@
-main .product_card {
+main .product__card {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin-bottom: 30px;
     padding: 0 5%;
     gap: 30px;
 }
@@ -9,6 +9,7 @@ main .product_card {
 main .card {
     width: 200px;
     padding: 10px;
+    align-items: flex-start;
     background: #f5f5f5;
     position: relative;
     overflow: visible;
