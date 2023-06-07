@@ -34,9 +34,12 @@ export type ProductForm = Yup.InferType<typeof productSchema>;
 
 // Size
 export interface ISize {
-  _id: string;
-  name: string;
-  description: string;
+  message: string;
+  data: [
+      _id: string,
+      name: string,
+      description: string
+  ];
 }
 
 export const sizeSchema = Yup.object({

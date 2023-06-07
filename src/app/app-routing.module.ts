@@ -42,17 +42,18 @@ const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
+      { path: '', redirectTo: 'product', pathMatch: 'full' },
       { path: 'product', component: ListProductComponent },
-      { path: 'user', component: ListUserComponent },
-      { path: 'addproduct', component: AddProductComponent },
-      { path: 'editproduct', component: EditProductComponent },
+      { path: 'product/add', component: AddProductComponent },
+      { path: 'product/edit', component: EditProductComponent },
       { path: 'category', component: ListCategoryComponent },
       { path: 'addcategory', component: AddCategoryComponent },
       { path: 'editcategory', component: EditCategoryComponent },
       { path: 'listcheckout', component: ListCheckOutComponent },
       { path: 'size', component: ListSizeComponent },
-      { path: 'addsize', component: AddSizeComponent },
-      { path: 'editsize', component: EditSizeComponent },
+      { path: 'size/add', component: AddSizeComponent },
+      { path: 'size/edit', component: EditSizeComponent },
+      { path: 'user', component: ListUserComponent },
     ],
   },
   { path: '**', component: NotFoundPageComponent },
@@ -62,4 +63,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

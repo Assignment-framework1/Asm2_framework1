@@ -1,7 +1,7 @@
 
 .main{
 	width: 350px;
-  margin: auto;
+  	margin:30px auto;
 	height: 500px;
 	background: red;
 	overflow: hidden;

@@ -8,9 +8,9 @@ import { ISize } from 'src/interface/models';
   styleUrls: ['./list-size.component.css'],
 })
 export class ListSizeComponent {
-  sizes!: ISize[];
+  sizes!: any[];
   constructor(private sizeService: SizeService) {
-    this.sizeService.getAll().subscribe((sizes) => console.log(sizes));
+    this.sizeService.getAll().subscribe((data) => this.sizes = data.data);
   }
 
   onHandleRemoveSize(id: any) {
