@@ -14,15 +14,15 @@ export class SizeService {
     return this.http.get<ISize>(this.apiUrl);
   }
   getById(id: any): Observable<ISize> {
-    return this.http.get<ISize>(this.apiUrl + id);
+    return this.http.get<ISize>(this.apiUrl + '/' + id);
   }
   addSize(data: ISize): Observable<ISize> {
     return this.http.post<ISize>(this.apiUrl, data);
   }
-  editSize(data: ISize): Observable<ISize> {
-    return this.http.patch<ISize>(this.apiUrl + data.data[0], data);
+  editSize(id:any, data: ISize): Observable<ISize> {
+    return this.http.put<ISize>(this.apiUrl + '/' + id, data);
   }
   deleteSize(id: any): Observable<ISize> {
-    return this.http.delete<ISize>(this.apiUrl + id);
+    return this.http.delete<ISize>(this.apiUrl + '/' + id);
   }
 }

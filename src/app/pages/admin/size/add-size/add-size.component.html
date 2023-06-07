@@ -1,0 +1,29 @@
+<a routerLink="#" onclick="history.back()">Back to list</a>
+<div class="w-100">
+  <form class="mx-auto" (ngSubmit)="onHandleAddSize()" [formGroup]="sizeForm">
+    <div class="w-50 mx-auto">
+      <div class="mb-3">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          formControlName="name"
+          class="form-control"
+        />
+      </div>
+
+      <div class="mb-3">
+        <input
+          type="text"
+          name="description"
+          placeholder="Description"
+          formControlName="description"
+          class="form-control"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary bg-block btn-lg">
+        Thêm Size
+      </button>
+    </div>
+  </form>
+</div>
