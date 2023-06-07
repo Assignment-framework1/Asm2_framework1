@@ -29,9 +29,11 @@ export class EditCategoryComponent {
       const id = String(params.get('id'));
       this.categoryService.getById(id).subscribe((category) => {
         this.category = category
-        this.id = this.category.data._id
-        this.name = this.category.data.name;
-        this.description = this.category.data.description;
+        console.log(this.category);
+        this.id = this.category._id;
+        this.name = this.category.name;
+        this.description = this.category.description;
+        console.log(this.id);
       });
     });
   }

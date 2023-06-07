@@ -21,6 +21,7 @@ export class AddCategoryComponent {
       name: this.categoryForm.value.name || '',
       description: this.categoryForm.value.description || '',
     };
+    
     this.categoryservice
       .addCategory(category)
       .subscribe((category) => console.log(category.message));

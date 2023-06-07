@@ -2,11 +2,11 @@
     <form class="mx-auto" (ngSubmit)="onHandleEditCategory()" [formGroup]="categoryForm">
         <div class="w-50 mx-auto">
             <div class="mb-3 ">
-                <input type="text" name="name" placeholder="Name" class="form-control" [ngModel]="name" />
+                <input type="text" name="name" placeholder="Name" class="form-control" formControlName="name" [ngModel]="name" />
             </div>
 
             <div class="mb-3">
-                <input type="text" name="description" placeholder="Description" class="form-control"
+                <input type="text" name="description" placeholder="Description" formControlName="description" class="form-control"
                     [ngModel]="description" />
             </div>
             <button type="submit" class="btn btn-primary bg-block btn-lg">
