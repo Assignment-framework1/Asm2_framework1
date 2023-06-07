@@ -49,8 +49,8 @@ const routes: Routes = [
       { path: 'product/add', component: AddProductComponent },
       { path: 'product/edit', component: EditProductComponent },
       { path: 'category', component: ListCategoryComponent },
-      { path: 'addcategory', component: AddCategoryComponent },
-      { path: 'editcategory', component: EditCategoryComponent },
+      { path: 'category/add', component: AddCategoryComponent },
+      { path: 'category/:id/edit', component: EditCategoryComponent },
       { path: 'listcheckout', component: ListCheckOutComponent },
       { path: 'size', component: ListSizeComponent },
       { path: 'size/add', component: AddSizeComponent },
@@ -65,4 +65,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
