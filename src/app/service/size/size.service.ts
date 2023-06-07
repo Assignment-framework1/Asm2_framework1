@@ -8,7 +8,7 @@ import { ISize } from 'src/interface/models';
 })
 export class SizeService {
   private apiUrl = 'http://localhost:8080/size';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAll(): Observable<ISize> {
     return this.http.get<ISize>(this.apiUrl);
@@ -19,7 +19,7 @@ export class SizeService {
   addSize(data: ISize): Observable<ISize> {
     return this.http.post<ISize>(this.apiUrl, data);
   }
-  editSize(id:any, data: ISize): Observable<ISize> {
+  editSize(id: any, data: ISize): Observable<ISize> {
     return this.http.put<ISize>(this.apiUrl + '/' + id, data);
   }
   deleteSize(id: any): Observable<ISize> {
