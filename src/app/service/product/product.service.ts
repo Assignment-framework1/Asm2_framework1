@@ -18,7 +18,7 @@ export class ProductService {
   getById(id: any): Observable<IProduct> {
     return this.http.get<IProduct>(`http://localhost:8080/product/${id}`);
   }
-  adddProduct(product: IProduct): Observable<IProduct> {
+  addProduct(product: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>(`http://localhost:8080/product`, product);
   }
 }
