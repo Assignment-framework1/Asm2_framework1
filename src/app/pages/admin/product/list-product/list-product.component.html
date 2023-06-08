@@ -1,0 +1,39 @@
+<a routerLink="add">Add new product</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Quality</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td><img [src]="product.image" /></td>
+      <td>{{ product.quantity }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="removeItem(product._id!)">
+          Xóa
+        </button>
+        <a
+          class="btn btn-warning"
+          routerLink="{{ product._id }}/edit"
+          aria-disabled="true"
+          >Edit</a
+        >
+        <a
+          class="btn btn-primary"
+          routerLink="#"
+          aria-disabled="true"
+          >Chi tiết</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
