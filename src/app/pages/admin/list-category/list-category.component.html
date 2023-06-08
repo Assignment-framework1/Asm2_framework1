@@ -1,3 +1,4 @@
+<a routerLink="add">ADD Category</a>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -8,11 +9,18 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr *ngFor="let category of categorys;index as i">
+            <td>{{i+1}}</td>
+            <td>{{category.name}}</td>
+            <td>{{category.description}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="onHandleRemoveCategory(category._id)">
+                    Xóa
+                </button>
+                <button class="btn btn-warning" routerLink="{{ category._id }}/edit">
+                    Edit
+                </button>
+            </td>
         </tr>
     </tbody>
 </table>

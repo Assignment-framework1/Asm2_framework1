@@ -22,12 +22,12 @@ import { ListUserComponent } from './pages/admin/list-user/list-user.component';
 import { AddProductComponent } from './pages/admin/product/add-product/add-product.component';
 import { EditProductComponent } from './pages/admin/product/edit-product/edit-product.component';
 import { CheckoutComponent } from './pages/admin/checkout/checkout.component';
-import { ListSizeComponent } from './pages/admin/list-size/list-size.component';
+import { ListSizeComponent } from './pages/admin/size/list-size/list-size.component';
 import { ListCategoryComponent } from './pages/admin/list-category/list-category.component';
 import { EditCategoryComponent } from './pages/admin/edit-category/edit-category.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
-import { EditSizeComponent } from './pages/admin/edit-size/edit-size.component';
-import { AddSizeComponent } from './pages/admin/add-size/add-size.component';
+import { EditSizeComponent } from './pages/admin/size/edit-size/edit-size.component';
+import { AddSizeComponent } from './pages/admin/size/add-size/add-size.component';
 import { ListCheckOutComponent } from './pages/admin/list-check-out/list-check-out.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 

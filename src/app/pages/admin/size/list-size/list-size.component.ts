@@ -14,8 +14,8 @@ export class ListSizeComponent {
   }
 
   onHandleRemoveSize(id: any) {
-    // this.sizeService.deleteSize(id).subscribe(() => {
-    //   this.sizes = this.sizes.filter((size) => size._id != id);
-    // });
+    this.sizeService.deleteSize(id).subscribe(() => {
+      this.sizes = this.sizes.filter((size) => size._id != id);
+    });
   }
 }

@@ -19,9 +19,9 @@ import { ListCategoryComponent } from './pages/admin/list-category/list-category
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 import { EditCategoryComponent } from './pages/admin/edit-category/edit-category.component';
 import { ListCheckOutComponent } from './pages/admin/list-check-out/list-check-out.component';
-import { ListSizeComponent } from './pages/admin/list-size/list-size.component';
-import { AddSizeComponent } from './pages/admin/add-size/add-size.component';
-import { EditSizeComponent } from './pages/admin/edit-size/edit-size.component';
+import { ListSizeComponent } from './pages/admin/size/list-size/list-size.component';
+import { AddSizeComponent } from './pages/admin/size/add-size/add-size.component';
+import { EditSizeComponent } from './pages/admin/size/edit-size/edit-size.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 const routes: Routes = [
@@ -49,12 +49,12 @@ const routes: Routes = [
       { path: 'product/add', component: AddProductComponent },
       { path: 'product/edit', component: EditProductComponent },
       { path: 'category', component: ListCategoryComponent },
-      { path: 'addcategory', component: AddCategoryComponent },
-      { path: 'editcategory', component: EditCategoryComponent },
+      { path: 'category/add', component: AddCategoryComponent },
+      { path: 'category/:id/edit', component: EditCategoryComponent },
       { path: 'listcheckout', component: ListCheckOutComponent },
       { path: 'size', component: ListSizeComponent },
       { path: 'size/add', component: AddSizeComponent },
-      { path: 'size/edit', component: EditSizeComponent },
+      { path: 'size/:id/edit', component: EditSizeComponent },
       { path: 'user', component: ListUserComponent },
     ],
   },
@@ -65,4 +65,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
