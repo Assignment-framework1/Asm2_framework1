@@ -16,19 +16,19 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let product of products; index as i">
+            <td>{{i +1}}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.origin_price }}</td>
+            <td><img [src]="product.image" /></td>
+            <td>{{product.description}}</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td> <button class="btn btn-danger" (click)="removeItem(product._id!)">Xóa</button></td>
+            <td><a class="btn btn-primary " routerLink="{{product._id}}/edit" aria-disabled="true">Edit</a></td>
         </tr>
     </tbody>
 </table>

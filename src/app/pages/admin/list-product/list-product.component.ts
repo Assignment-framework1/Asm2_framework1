@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductService } from 'src/app/service/product/product.service';
+import { IProduct } from 'src/interface/models';
 
 @Component({
   selector: 'app-list-product',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-product.component.css']
 })
 export class ListProductComponent {
+  products: IProduct[] = [];
+  constructor(private productService: ProductService) {
+    this.productService.getAll().subscribe(data => {
+      this.products = data
+    })
+  }
 
+  removeItem(id: any) {
+    const confirm = window.confirm('Are you sure you want to delete')
+    if (confirm) {
+      this.productService.deleteProduct(id).subscribe(() => {
+        this.products = this.products.filter(item => item._id !== id)
+      })
+    }
+  }
 }
