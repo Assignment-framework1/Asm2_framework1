@@ -11,10 +11,10 @@ import { SigninPageComponent } from './pages/signin-page/signin-page.component';
 import { SingnupPageComponent } from './pages/singnup-page/singnup-page.component';
 import { DetailProductComponent } from './pages/detail-product/detail-product.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
-import { ListProductComponent } from './pages/admin/list-product/list-product.component';
+import { ListProductComponent } from './pages/admin/product/list-product/list-product.component';
 import { ListUserComponent } from './pages/admin/list-user/list-user.component';
-import { AddProductComponent } from './pages/admin/add-product/add-product.component';
-import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
+import { AddProductComponent } from './pages/admin/product/add-product/add-product.component';
+import { EditProductComponent } from './pages/admin/product/edit-product/edit-product.component';
 import { ListCategoryComponent } from './pages/admin/list-category/list-category.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 import { EditCategoryComponent } from './pages/admin/edit-category/edit-category.component';
@@ -37,7 +37,7 @@ const routes: Routes = [
       { path: 'about', component: AboutPageComponent },
       { path: 'signin', component: SigninPageComponent },
       { path: 'signup', component: SingnupPageComponent },
-      { path: 'contact', component: ContactPageComponent }
+      { path: 'contact', component: ContactPageComponent },
     ],
   },
   {
