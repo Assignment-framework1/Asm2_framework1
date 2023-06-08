@@ -9,10 +9,10 @@ import { date } from 'yup';
 @Component({
   selector: 'app-edit-product',
   templateUrl: './edit-product.component.html',
-  styleUrls: ['./edit-product.component.css']
+  styleUrls: ['./edit-product.component.css'],
 })
 export class EditProductComponent {
-  id!: any;
+  product!: any;
   categories!: any[];
   sizes!: any[];
   status!: any;
@@ -33,20 +33,22 @@ export class EditProductComponent {
     private categoryService: CategoryService,
     private sizeService: SizeService,
     private fb: FormBuilder,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {
     this.categoryService
       .getAll()
       .subscribe((category) => (this.categories = category));
-    this.sizeService.getAll().subscribe((data) => this.sizes = data.data);
-    this.route.paramMap.subscribe((params)=> {
+    
+    this.sizeService.getAll().subscribe((data) => (this.sizes = data.data));
+
+    this.route.paramMap.subscribe((params) => {
       const id = String(params.get('id'));
-      this.productService.getById(id).subscribe(product => {
-        
-      })
-    })
+      this.productService.getById(id).subscribe((product) => {
+        this.product = product.data;
+      });
+    });
   }
-  onHandleEdit(){
+  onHandleEdit() {
     const quantity = this.productForm.value.quantity;
     if (quantity! > 0) {
       this.status = true;
@@ -65,8 +67,6 @@ export class EditProductComponent {
       quantity: this.productForm.value.quantity || 0,
       status: this.status,
     };
-    this.productService
-      .editProduct(product)
-      .subscribe((data) => console.log(data.message));
+    this.productService.editProduct(this.product._id,product).subscribe((data)=>console.log(data.message))
   }
 }

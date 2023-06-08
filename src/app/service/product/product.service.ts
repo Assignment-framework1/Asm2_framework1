@@ -21,7 +21,7 @@ export class ProductService {
   addProduct(product: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>(`http://localhost:8080/product`, product);
   }
-  editProduct(id: any, product:IProduct): Observable<IProduct>{
+  editProduct(id: any, product:IProduct): Observable<IProduct> {
     return this.http.put<IProduct>(`http://localhost:8080/product/${id}`, product)
   }
 }
