@@ -1,5 +1,6 @@
+<a routerLink="#" onclick="history.back()">Back to list</a>
 <div class="w-100">
-    <form class="mx-auto">
+    <form class="mx-auto"(ngSubmit)="onHandleEdit()" [formGroup]="">
         <div class="w-50 mx-auto">
             <div class="mb-3 ">
                 <input type="text" name="name" placeholder="Name" class="form-control" />
