@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  private API_URL = 'http://localhost:8080/signup';
+  private API_URL = 'http://localhost:8080/users';
 
   constructor(private http: HttpClient) { }
   registerUser(user: { username: string, password: string }) {

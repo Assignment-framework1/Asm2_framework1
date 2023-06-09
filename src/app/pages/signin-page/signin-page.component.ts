@@ -3,6 +3,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { SigninService } from 'src/app/service/user/signin.service';
 import { Signin } from 'src/interface/models';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/service/user/user.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-signin-page',
@@ -16,12 +18,21 @@ export class SigninPageComponent {
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
+  signupForm = this.fb.group({
+    username: ['', [Validators.required,]],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
+    phone: ['', [Validators.required,]],
+    confirmPassword: ['', [Validators.required,]],
+  });
 
   constructor(
     private fb: FormBuilder,
     private signinService: SigninService,
-    private router: Router
-  ) {}
+    private signupService: UserService,
+    private router: Router,
+    private http: HttpClient
+  ) { }
 
   onSubmitSignin() {
     const user = {
@@ -39,5 +50,15 @@ export class SigninPageComponent {
         console.log(error);
       }
     );
+  }
+  onSubmit() {
+    const users = {
+      username: this.signupForm.value.username,
+      email: this.signupForm.value.email,
+      password: this.signupForm.value.password,
+      phone: this.signupForm.value.username,
+      confirmPassword: this.signupForm.value.username,
+    };
+    this.http.post('http://localhost:8080/users/signup', this.user).subscribe(data => console.log(data))
   }
 }
