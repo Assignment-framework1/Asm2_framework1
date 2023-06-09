@@ -21,9 +21,7 @@
         <div class="mb-3">
           <select class="form-select" id="size-select">
             <option selected>Chọn size</option>
-            <option>Size S</option>
-            <option>Size M</option>
-            <option>Size L</option>
+            <option *ngFor="let size of products.size">{{size.name}}</option>
           </select>
         </div>
         <p class="mb-3">{{products.description}}</p>
