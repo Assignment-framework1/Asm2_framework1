@@ -1,34 +1,37 @@
 <main>
-  <div class="container py-5">
+  <div class="container py-5" *ngIf="products">
     <div class="row">
       <div class="col-md-6">
         <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
+          src="{{products.image}}"
           class="img-fluid mb-3"
           alt="Hình ảnh sản phẩm"
         />
       </div>
       <div class="col-md-6">
-        <h1 class="mb-3">Tên sản phẩm</h1>
+        <h1 class="mb-3">{{products.name}}</h1>
         <div class="row mb-2">
-          <div class="col-md-1">
-            <h3 class="text-danger">$100</h3>
+          <div class="col-md-2">
+            <h3 class="text-danger">{{products.price}}</h3>
           </div>
-          <div class="col-md-1">
-            <h4 class="text-muted"><del>$120</del></h4>
+          <div class="col-md-2">
+            <h4 class="text-muted"><del>{{products.origin_price}}</del></h4>
           </div>
         </div>
         <div class="mb-3">
           <select class="form-select" id="size-select">
             <option selected>Chọn size</option>
-            <option>Size S</option>
-            <option>Size M</option>
-            <option>Size L</option>
+            <option *ngFor="let size of products.size">{{size.name}}</option>
           </select>
         </div>
-        <p class="mb-3">Mô tả sản phẩm</p>
-
-        <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+        <p class="mb-3">{{products.description}}</p>
+        <div class="quantity-group">
+          <button (click)="handleQuantity('min')" >-</button>
+          <input type="text" value="{{quantity}}" />
+          <button (click)="handleQuantity('plus')">+</button>
+      </div>
+        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-primary">Mua ngay</button>
       </div>
     </div>
   </div>

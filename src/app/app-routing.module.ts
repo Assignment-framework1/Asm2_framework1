@@ -31,7 +31,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomePageComponent },
       { path: 'product', component: ProductPageComponent },
-      { path: 'detail', component: DetailProductComponent },
+      { path: 'product/detail/:id', component: DetailProductComponent },
       { path: 'cart', component: CartPageComponent },
       { path: 'checkout', component: CheckoutPageComponent },
       { path: 'about', component: AboutPageComponent },
