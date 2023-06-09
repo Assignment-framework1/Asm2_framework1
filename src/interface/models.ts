@@ -2,17 +2,20 @@ import * as Yup from 'yup';
 
 // Product
 export interface IProduct {
-  _id: string;
-  name: string;
-  price: number;
-  origin_price: number;
-  image: string;
-  description: string;
-  size: [string];
-  category_id: string;
-  brand: string;
-  quantity: number;
-  status: string;
+  message: string;
+  data: [
+    _id: string,
+    name: string,
+    price: number,
+    origin_price: number,
+    image: string,
+    description: string,
+    size: [string],
+    category_id: string,
+    brand: string,
+    quantity: number,
+    status: string
+  ];
 }
 
 export const productSchema = Yup.object({
@@ -35,11 +38,8 @@ export type ProductForm = Yup.InferType<typeof productSchema>;
 // Size
 export interface ISize {
   message: string;
-  data: [
-    _id: string,
-    name: string,
-    description: string
-  ];
+
+  data: [_id: string, name: string, description: string];
 }
 
 export const sizeSchema = Yup.object({
@@ -54,12 +54,7 @@ export type SizeForm = Yup.InferType<typeof sizeSchema>;
 // Category
 export interface ICategory {
   message: string;
-  data: [
-    _id: string,
-    name: string,
-    description: string,
-  ]
-
+  data: [_id: string, name: string, description: string];
 }
 
 export const categorySchema = Yup.object({
@@ -85,4 +80,9 @@ export interface ICheckout {
   status: string;
   address: string;
   total: number;
+}
+
+export interface Signin {
+    email: string;
+    password: string;
 }
