@@ -39,12 +39,7 @@ export type ProductForm = Yup.InferType<typeof productSchema>;
 export interface ISize {
   message: string;
 
-  data: [
-    _id: string,
-    name: string,
-    description: string
-  ];
-
+  data: [_id: string, name: string, description: string];
 }
 
 export const sizeSchema = Yup.object({
@@ -59,12 +54,7 @@ export type SizeForm = Yup.InferType<typeof sizeSchema>;
 // Category
 export interface ICategory {
   message: string;
-  data: [
-    _id: string,
-    name: string,
-    description: string,
-  ]
-
+  data: [_id: string, name: string, description: string];
 }
 
 export const categorySchema = Yup.object({
@@ -90,4 +80,9 @@ export interface ICheckout {
   status: string;
   address: string;
   total: number;
+}
+
+export interface Signin {
+    email: string;
+    password: string;
 }
