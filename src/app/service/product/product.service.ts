@@ -7,10 +7,10 @@ import { IProduct } from 'src/interface/models';
   providedIn: 'root',
 })
 export class ProductService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getAll(): Observable<IProduct> {
-    return this.http.get<IProduct>(`http://localhost:8080/product`);
+  getAll(): Observable<any> {
+    return this.http.get<any>(`http://localhost:8080/product`);
   }
   deleteProduct(id: any): Observable<IProduct> {
     return this.http.delete<IProduct>(`http://localhost:8080/product/${id}`);
@@ -21,7 +21,7 @@ export class ProductService {
   addProduct(product: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>(`http://localhost:8080/product`, product);
   }
-  editProduct(id: any, product:IProduct): Observable<IProduct> {
+  editProduct(id: any, product: IProduct): Observable<IProduct> {
     return this.http.put<IProduct>(`http://localhost:8080/product/${id}`, product)
   }
 }

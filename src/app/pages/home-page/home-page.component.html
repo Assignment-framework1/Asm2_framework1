@@ -1,103 +1,29 @@
 <section>
   <div class="banner">
-    <img
-      src="https://intphcm.com/data/upload/banner-thoi-trang-nam-tinh.jpg"
-      alt=""
-    />
+    <img src="https://intphcm.com/data/upload/banner-thoi-trang-nam-tinh.jpg" alt="" />
   </div>
 </section>
 <main>
   <h1>NEW PRODUCT</h1>
-  <div class="product__card">
-    <a href="#" class="card--link d-block">
+  <div class="product__card" *ngIf="products">
+    <a *ngFor="let product of products" routerLink="/detail/{{product.id}}" class="card--link d-block">
       <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
+        <img src="{{product.image}}" class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">
-          <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
-          <p class="card-text">$100</p>
+          <h5 class="card-title fs-6 float-left">{{product.name}}</h5>
+          <p class="card-text">{{product.price}}</p>
         </div>
       </div>
     </a>
-    <a href="#" class="card--link d-block">
-      <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
-        <div class="card-body px-1">
-          <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
-          <p class="card-text">$100</p>
-        </div>
-      </div>
-    </a>
-    <a href="#" class="card--link d-block">
-      <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
-        <div class="card-body px-1">
-          <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
-          <p class="card-text">$100</p>
-        </div>
-      </div>
-    </a>
-    <a href="#" class="card--link d-block">
-      <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
-        <div class="card-body px-1">
-          <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
-          <p class="card-text">$100</p>
-        </div>
-      </div>
-    </a>
-    <a href="#" class="card--link d-block">
-      <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
-        <div class="card-body px-1">
-          <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
-          <p class="card-text">$100</p>
-        </div>
-      </div>
-    </a>
-    <a href="#" class="card--link d-block">
-      <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
-        <div class="card-body px-1">
-          <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
-          <p class="card-text">$100</p>
-        </div>
-      </div>
-    </a>
+
   </div>
   <p class="line"></p>
   <h1>TOP PRODUCT</h1>
   <div class="product__card">
     <a href="#" class="card--link d-block">
       <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
+        <img src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
+          class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">
           <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
           <p class="card-text">$100</p>
@@ -106,11 +32,8 @@
     </a>
     <a href="#" class="card--link d-block">
       <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
+        <img src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
+          class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">
           <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
           <p class="card-text">$100</p>
@@ -119,11 +42,8 @@
     </a>
     <a href="#" class="card--link d-block">
       <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
+        <img src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
+          class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">
           <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
           <p class="card-text">$100</p>
@@ -132,11 +52,8 @@
     </a>
     <a href="#" class="card--link d-block">
       <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
+        <img src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
+          class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">
           <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
           <p class="card-text">$100</p>
@@ -145,11 +62,8 @@
     </a>
     <a href="#" class="card--link d-block">
       <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
+        <img src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
+          class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">
           <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
           <p class="card-text">$100</p>
@@ -158,11 +72,8 @@
     </a>
     <a href="#" class="card--link d-block">
       <div class="card">
-        <img
-          src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
-          class="card-img-top"
-          alt="Hình ảnh sản phẩm"
-        />
+        <img src="https://i0.wp.com/pt2000.com.vn/wp-content/uploads/2023/05/NJ-M120-0JD00.1.jpg?ssl=1"
+          class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">
           <h5 class="card-title fs-6 float-left">Tên sản phẩm</h5>
           <p class="card-text">$100</p>
