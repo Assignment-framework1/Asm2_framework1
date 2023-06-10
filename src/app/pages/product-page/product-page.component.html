@@ -1,7 +1,7 @@
 <main>
   <h1>Product</h1>
   <div class="product__card" *ngIf="products">
-    <a *ngFor="let product of products" routerLink="/detail/{{product.id}}" class="card--link d-block">
+    <a *ngFor="let product of products" routerLink="detail/{{product._id}}" class="card--link d-block">
       <div class="card">
         <img src="{{product.image}}" class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">

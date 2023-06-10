@@ -5,13 +5,13 @@
 </section>
 <main>
   <h1>NEW PRODUCT</h1>
-  <div class="product__card" *ngIf="products">
-    <a *ngFor="let product of products" routerLink="/detail/{{product.id}}" class="card--link d-block">
-      <div class="card">
+  <div class="product__card">
+    <a *ngFor="let product of products;let i = index" routerLink="product/detail/{{product._id}}" class="card--link d-block">
+      <div class="card" *ngIf="i<6">
         <img src="{{product.image}}" class="card-img-top" alt="Hình ảnh sản phẩm" />
         <div class="card-body px-1">
           <h5 class="card-title fs-6 float-left">{{product.name}}</h5>
-          <p class="card-text">{{product.price}}</p>
+          <p class="card-text">${{product.price}}</p>
         </div>
       </div>
     </a>
