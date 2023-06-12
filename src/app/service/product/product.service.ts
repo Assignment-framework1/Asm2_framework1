@@ -24,4 +24,7 @@ export class ProductService {
   editProduct(id: any, product: IProduct): Observable<IProduct> {
     return this.http.put<IProduct>(`http://localhost:8080/product/${id}`, product)
   }
+  searchProduct(product: any): Observable<IProduct> {
+    return this.http.post<IProduct>(`http://localhost:8080/product/productname`, product);
+  }
 }
