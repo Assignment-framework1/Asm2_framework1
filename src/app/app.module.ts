@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +30,10 @@ import { EditSizeComponent } from './pages/admin/size/edit-size/edit-size.compon
 import { AddSizeComponent } from './pages/admin/size/add-size/add-size.component';
 import { ListCheckOutComponent } from './pages/admin/list-check-out/list-check-out.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { AuthInterceptor } from './auth.interceptor';
+import { AuthGuard } from './auth.guard';
+import { Router } from '@angular/router';
+import { SigninService } from './service/user/signin.service';
 
 @NgModule({
   declarations: [
@@ -66,7 +70,14 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    {
+      provide: AuthGuard,
+      useFactory: () => new AuthGuard(),
+      deps: [Router],
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -23,13 +23,15 @@ import { ListSizeComponent } from './pages/admin/size/list-size/list-size.compon
 import { AddSizeComponent } from './pages/admin/size/add-size/add-size.component';
 import { EditSizeComponent } from './pages/admin/size/edit-size/edit-size.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: ClientLayoutComponent,
     children: [
-      { path: '', component: HomePageComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomePageComponent },
       { path: 'product', component: ProductPageComponent },
       { path: 'product/detail/:id', component: DetailProductComponent },
       { path: 'cart', component: CartPageComponent },
@@ -43,6 +45,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'product', pathMatch: 'full' },
       { path: 'product', component: ListProductComponent },
@@ -65,4 +68,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
