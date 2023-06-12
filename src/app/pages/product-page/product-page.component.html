@@ -1,5 +1,12 @@
 <main>
   <h1>Product</h1>
+  <form (ngSubmit)="onHandleSubmit()">
+    <div class="input-group" class="w-50">
+      <input type="text" class="form-control" [(ngModel)]="search.name" name="name" placeholder="Nhập từ khóa" />
+      <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </div>
+  </form>
+
   <div class="product__card" *ngIf="products">
     <a *ngFor="let product of products" routerLink="detail/{{product._id}}" class="card--link d-block">
       <div class="card">

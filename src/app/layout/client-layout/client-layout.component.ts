@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/service/product/product.service';
 
 @Component({
   selector: 'app-client-layout',
@@ -7,10 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./client-layout.component.css'],
 })
 export class ClientLayoutComponent {
+
   isLoggedIn!: boolean;
   isAdmin!: boolean;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+
+  ) {
     if (localStorage.getItem('user')) {
       this.isLoggedIn = true;
       const user = JSON.parse(localStorage.getItem('user') || '{}');
@@ -25,4 +30,5 @@ export class ClientLayoutComponent {
     window.alert('Bạn đã đăng xuất')
     this.router.navigate(['/home']);
   }
+
 }
