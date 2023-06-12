@@ -11,7 +11,7 @@ export class SigninService {
 
   constructor(private http: HttpClient) {}
 
-  signIn(data:any): Observable<any> {
-    return this.http.post<Signin>(this.apiUrl+"/signin",data);
+  signIn(data: any): Observable<any> {
+    return this.http.post<Signin>(this.apiUrl + '/signin', data);
   }
 }

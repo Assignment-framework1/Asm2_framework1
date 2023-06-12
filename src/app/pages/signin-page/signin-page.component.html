@@ -2,7 +2,7 @@
   <input type="checkbox" id="chk" aria-hidden="true" />
 
   <div class="signup">
-    <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+    <form (ngSubmit)="onSubmitSignup()" [formGroup]="signupForm">
       <label for="chk" aria-hidden="true">Sign up</label>
       <input type="text" name="username" placeholder="User name" formControlName="username" required="" />
       <input type="email" name="email" placeholder="Email" formControlName="email" required="" />

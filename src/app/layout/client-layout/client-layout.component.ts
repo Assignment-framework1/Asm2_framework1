@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/service/product/product.service';
 export class ClientLayoutComponent {
 
   isLoggedIn!: boolean;
+  isAdmin!: boolean;
 
   constructor(
     private router: Router,
@@ -17,6 +18,8 @@ export class ClientLayoutComponent {
   ) {
     if (localStorage.getItem('user')) {
       this.isLoggedIn = true;
+      const user = JSON.parse(localStorage.getItem('user') || '{}');
+      this.isAdmin = user.isAdmin
     } else {
       this.isLoggedIn = false;
     }
@@ -24,7 +27,8 @@ export class ClientLayoutComponent {
 
   logout() {
     localStorage.removeItem('user');
-    this.router.navigate(['/']);
+    window.alert('Bạn đã đăng xuất')
+    this.router.navigate(['/home']);
   }
 
 }

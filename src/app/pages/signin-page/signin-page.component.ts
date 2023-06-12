@@ -44,23 +44,25 @@ export class SigninPageComponent {
         const accessToken = data.data.accessToken;
         const infoUser = { ...data.data.user, accessToken };
         localStorage.setItem('user', JSON.stringify(infoUser));
-        this.router.navigate(['']);
+        window.alert(`Xin chào ${infoUser.username}`);
+        this.router.navigate(['/home']);
       },
       (error) => {
         console.log(error);
       }
     );
   }
-  onSubmit() {
+  onSubmitSignup() {
     const user = {
       username: this.signupForm.value.username,
       email: this.signupForm.value.email,
       password: this.signupForm.value.password,
       phone: this.signupForm.value.phone,
       confirmPassword: this.signupForm.value.confirmPassword,
+      isAdmin: false,
     };
     this.signupService
       .registerUser(user)
-      .subscribe((data) => console.log(data));
+      .subscribe(() => window.alert(`Đăng ký thành công`));
   }
 }

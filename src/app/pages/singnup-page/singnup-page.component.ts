@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-singnup-page',
   templateUrl: './singnup-page.component.html',
-  styleUrls: ['./singnup-page.component.css']
+  styleUrls: ['./singnup-page.component.css'],
 })
 export class SingnupPageComponent {
   user = {
@@ -11,18 +11,18 @@ export class SingnupPageComponent {
     password: '',
     email: '',
     phone: '',
-    confirmpassword: ''
+    confirmpassword: '',
+    isAdmin: false,
   };
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   onSubmit() {
     this.http.post('http://localhost:3000/signup', this.user).subscribe(
-      response => {
+      (response) => {
         console.log('Registration successful');
       },
-      error => {
+      (error) => {
         console.error('Registration failed');
       }
     );
-
   }
 }
