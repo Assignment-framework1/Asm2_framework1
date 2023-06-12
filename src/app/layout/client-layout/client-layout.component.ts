@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/service/product/product.service';
 
 @Component({
   selector: 'app-client-layout',
@@ -7,9 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./client-layout.component.css'],
 })
 export class ClientLayoutComponent {
+
   isLoggedIn!: boolean;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+
+  ) {
     if (localStorage.getItem('user')) {
       this.isLoggedIn = true;
     } else {
@@ -21,4 +26,5 @@ export class ClientLayoutComponent {
     localStorage.removeItem('user');
     this.router.navigate(['/']);
   }
+
 }

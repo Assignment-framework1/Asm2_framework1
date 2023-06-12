@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CategoryService } from 'src/app/service/category/category.service';
+import { ProductService } from 'src/app/service/product/product.service';
 import { ICategory } from 'src/interface/models';
 
 @Component({
@@ -9,7 +10,10 @@ import { ICategory } from 'src/interface/models';
 })
 export class ListCategoryComponent {
   categorys!: any[];
-  constructor(private categoryService: CategoryService) {
+
+
+  constructor(private categoryService: CategoryService
+  ) {
     this.categoryService.getAll().subscribe((data) => (this.categorys = data));
   }
   onHandleRemoveCategory(id: any) {
@@ -17,4 +21,6 @@ export class ListCategoryComponent {
       this.categorys = this.categorys.filter((categorys) => categorys._id != id);
     });
   }
+
+
 }
