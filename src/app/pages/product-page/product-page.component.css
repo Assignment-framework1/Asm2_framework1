@@ -5,7 +5,9 @@ main .product__card {
     padding: 0 5%;
     gap: 30px;
 }
-
+main .product__card a {
+    text-decoration: none;
+}
 main .card {
     width: 200px;
     padding: 10px;
@@ -19,4 +21,36 @@ main .card {
 main h1 {
     margin: 20px 40px;
     font-size: 25px;
+}
+form {
+    width: 500px;
+}
+form .input-group{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 20px;
+}
+form input{
+    width: 400px;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    border-right: none white;
+    font-size: 14px;
+    padding: 0 10px;
+    border: 1px solid rgb(171, 171, 171);
+}
+form button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(171, 171, 171);
+    color: black;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid rgb(171, 171, 171);
+}
+form button:hover{
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    transition: all linear 0.2s;
 }
